@@ -1,5 +1,5 @@
-NER - Name Entity Extraction Web Application using Flask"\n"
-I have used RapidApi for NER API."\n"
+NER - Name Entity Extraction Web Application using Flask\n
+I have used RapidApi for NER API.\n
 Languages used:
 1. Python
 2. Flask
