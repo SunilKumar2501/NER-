@@ -58,5 +58,24 @@ def perform_ner():
 def logout():
     return redirect("/")
 
+@app.route("/emotions")
+def emotions():
+    return render_template("emotions.html")
+
+
+@app.route("/perform_emo",methods = ["Post"])
+def perform_emo():
+    text = request.form.get("emo_text")
+    d = nerapi.emotional(text)
+    # print(response)
+    l = []
+    for i in d:
+        for j in d[i]:
+            l.append([j, d[i][j]])
+    answer = sorted(l, key=lambda x: x[1], reverse=True)[:3]
+    results = "".join([f"{item[0]}: {item[1]}\n" for item in answer])
+    print(results)
+    return render_template("emotions.html", result=results)
+
 app.run(debug = True)
 
