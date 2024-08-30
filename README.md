@@ -1,4 +1,4 @@
-NER - Name Entity Extraction Web Application using Flask.
+NER - Name Entity Extraction and Emotional Analysis Web Application using Flask.
 I have used RapidApi for NER API.
 Languages used:
 1. Python
